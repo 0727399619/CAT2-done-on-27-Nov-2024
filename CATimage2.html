@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><style>
+body,label, input, select, button {
+    
+    margin: 0;
+    padding: 0;
+    color: black;
+  }
+  h1{
+    margin-right: 200px;
+  }
+body {
+    background-color:rgba(245, 245, 245, 0.822);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.a{
+color: red;
+}
+.b{
+    color: red;
+}
+.c{
+    color: red;
+}
+.d{
+    color: red;
+}
+.e{
+    color: red;
+}
+.f{
+    color: red;
+}
+.g{
+    color: red;
+}
+.h{
+    color: red;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+    
+
+
+</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register Account</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<h1>Register Account</h1><br>
+    <form id="registration-form">
+      <div class="form-group">
+        <label for="fullname">Full Name:</label>
+        <input type="text"  placeholder="as"id="fullname" name="fullname">
+        <span class="a">User name must be at least 4 characters</span>
+      </div><br>
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password"placeholder=".." id="password" name="password">
+        <span class="b">Password must be at least 4 characters</span>
+      </div><br>
+      <div class="form-group">
+        <label for="confirm-password">Confirm Password:</label>
+        <input type="password"placeholder="....." id="confirm-password" name="confirm-password">
+        <span class="c">Passwords do not match</span>
+      </div><br>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email"placeholder="Edward@gmail" id="email" name="email">
+        <span class="d">Invalid email format</span><br>  
+        &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp;   &nbsp; &nbsp;Format edward@gmail.com
+      </div><br>
+      <div class="form-group">
+        <label for="phone">Phone Number:</label>
+        <input type="tel" placeholder="11111111"id="phone" name="phone">
+        <span class="e">Invalid phone number</span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Format:0XXX_XXX_XXX
+       
+      </div><br>
+      <div class="form-group">
+        <label for="zip">Zip Code:</label>
+        <input type="text"placeholder="11111111111" id="zip" name="zip">
+        <span class="f">Invalid Zip Code</span><br>
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; format: Use 5 or 9 digits zip code
+      </div><br>
+      <div class="form-group">
+        <label for="card-type">Card Type:</label>
+        <select id="card-type" name="card-type">
+          <option value="visa">Visa</option>
+          <option value="mastercard">MasterCard</option>
+          <option value="amex">American Express</option>
+        </select>
+      </div><br>
+      <div class="form-group">
+        <label for="card-number">Card Number:</label>
+        <input type="text"placeholder="111111111111" id="card-number" name="card-number">
+        <span class="g">Invalid card number format</span><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        Format:1111_2222_3333_4444
+      </div><br>
+      <div class="form-group">
+        <label for="expiration-date">Expiration Date:</label>
+        <input type="date" placeholder="111111111"id="expiration-date" name="expiration-date">
+        <span class="h">Invalid date format</span><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        Format:YYYY_MM_DD
+      </div><br>
+      <div class="form-actions">
+        <button type="submit">Register</button>
+        <button type="reset">Clear Form</button>
+      </div>
+    </form>
+  </div>
+</body>
+</html>

@@ -1,227 +1,188 @@
-<!DOCTYPE html>
+<!Doctype html>
 <html lang="en">
-<head><style>
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f3f3f3;
-  color: #333;
-  text-align: center;
-}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"content="width=device-width,initial -scale=1.0">
+    <title> Weather application</title>
+    <h3>Welcome to our Wearther application</h3>
+            <style>
+                button{
+                    color: white;
+                    background-color: rgb(109,10,56);
+                    border-radius: 3px;
+                    height: 30px;
+                    width: 80px;
+                    border: none;
+                    cursor: pointer;
+                }
+                .enter{
+                    padding-top: 5;
+                    background-color: white;
+                    border-radius: 4px;
+                    height: 80px;
+                    width: 700px;
+                    border: 4px;
+                
 
-.container {
-  width: 90%;
-  max-width: 800px;
-  margin: 50px auto;
-  background-color: #ddd;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-h1 {
-  color: #5c3c92;
-  margin-bottom: 20px;
-}
-
-.search-form {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 20px;
-  
-}
-
-#city-input {
-  padding: 10px;
-  width: 70%;
-  border: 2px solid #5c3c92;
-  border-radius: 5px 0 0 5px;
-}
-
-.search-btn {
-  padding: 10px 20px;
-  background-color: #5c3c92;
-  color: white;
-  border: none;
-  border-radius: 0 5px 5px 0;
-  cursor: pointer;
-}
-
-.search-btn:hover {
-  background-color: #4a2f74;
-}
-
-.weather-info {
-  margin: 20px 0;
-}
-
-.weather-info h2 {
-  font-size: 2em;
-  margin: 10px 0;
-}
-
-.current-weather {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 10px 0;
-}
-
-.current-weather .temp {
-  font-size: 3em;
-  font-weight: bold;
-  margin-left: 10px;
-}
-
-.forecast {
-  display: flex;
-  justify-content: space-around;
-  margin: 20px 0;
-  color: purple;
-}
-
-.day {
-  text-align: center;
-  font-size: 0.9em;
-}
-.temp{
-    margin-left: 10px;
-}
-footer{
-                    padding: 0 0 10px 0;
-                    border-top: 5solid rgb(175,172,172) ;
+                }
+                h3{
+                    margin-right: 80px;
+                    text-align:center;
+                    text-decoration: underline;
+            color: darkolivegreen;
+                }
+                .names{
+                    color: rgb(109,10,56);
+                    font-weight: 15px;
+                    block-size: auto;
+                }
+                body{
+                    
+                    background-color: rgb(138,128,128);
+                    border-radius: 10px;
+                    padding: 10px;
+                    height: 200px;
+                    margin:200px;
+                    border: 10px;
+                    margin-top: auto;
+                    
+                    align-items: center;
+                    
+                }
+                h1{
+                
                     text-align: center;
-                    color: rgb(0 0 0 0.5);
-                    font-size: 13px;
+                    margin-right: 50px;
                 }
-               
-                .form-input{
-                    text-decoration: solid;
-                    border: none;
-                    width: 70%;
-                    border-color: blueviolet;
-                    border-radius: 5px;
-                    font-size: 20px;
-                    padding: 10px 15px;
+    
+                
+                .day{
+                    color: rgb(109,10,56);
+                    display: inline-block;
+                    margin-left: 6px;
                 }
-
-                .form-button{
-                    border: none;
-                    background-color: rgb(123,3,123);
-                    color: whitesmoke;
-                    padding: 10px 15px;
-                    font-size: 20px;
-                    text-transform: uppercase;
-                    margin-left: 5px;
-                    border-radius: 9px;
-                }
-                .Humidity{
-                    color: rgb(123,3,123);
+                .highlight{
+                    color: rgb(109,10,56);
                     font-weight: bold;
                 }
-               
-                
-                </style>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Weather Application</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <div class="container">
-    <h1>Welcome to our Weather Application</h1>
-    <div>
-    <form action=""class="search-form"id="search-form">
-        <input type="search"name="city-name"placeholder="Enter city name"
-        equired class="form-input"/>
-<button type="submit"class="form-button">search</button>
-    </form></div>
-    <div class="weather-info">
-      <h2>Paris</h2>
-      
-      <div class="current-weather">
-        <span class="icon">🌥</span>
-        <span class="temp">12°C</span>
-        
-      </div>
-      <div>
-        <p>
-            <span id="currenttime">
-                Tuesday
+                button:hover{
+                    background-color: blue;
 
-                14.40
-              ,
-            </span>
-            <span id="weatherdescription">
-                scattered clouds</span>
-                <br/>
-                Humidity:
-                <span id="Humidity"class="Humidity">
-                    66</span>
-                   , Wind speed:
-                   <span id="windspeed">
-                    4.3
-                   </span>
-        </p>
-    </div>
-    </div>
-    <div class="forecast">
-      <div class="day">
-        <p>Mon</p>
-        <p>🌦</p>
-        <p>15°  19°</p>
-       
-      </div>
-      <div class="day">
-        <p>Tue</p>
-        <p>🌦</p>
-        <p>15°  19°</p>
-       
-      </div>
-      <div class="day">
-        <p>Wed</p>
-        <p>🌦</p>
-        <p>15°  19°</p>
-       
-      </div>
-      <div class="day">
-        <p>Thu</p>
-        <p>🌦</p>
-        <p>15°  19°</p>
-       
-      </div>
-      <div class="day">
-        <p>Fri</p>
-        <p>🌦</p>
-        <p>15°  19°</p>
+                }
+                .degrees{
+                      display:flex ;
+                      color: rgb(109,10,56);
+                      font-weight: bold;
+                }
+                .degrees p{
+                    margin: 0 10px;
+                }
+                p{
+                    text-align: left;
+                }
+                .fade{
+                    color: rgba(155, 139, 146, 0.911);
+                }
+                .links{
+    
+                    color: rgb(109,10,56,0.5);
+                }
+                .temperature{
+                    font-size: 50px;
+                    font-weight: bold;
+                }
+                .degrees-symbol{
+                    font-size: 16px;
+                }
+                .heading{
+                    margin: 0;
+                }
+                .heading-wrapper{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: 10px;
+                }
+                footer{
+                    
+                      color: rgba(15, 11, 34, 0.4);
+
+                }
+            </style>
         
-      </div>
-      <div class="day">
-        <p>Sat</p>
-        <p>🌦</p>
-        <p>15°  19°</p>
-        
-      </div>
-      <div class="day">
-        <p>Sun</p>
-        <p>🌦</p>
-        <p>15° 19°</p>
-        
-      </div>
-    </div>
-  </div>
-  
-    <footer>
-        
-          <p> Coded by<a href="http://gihub.com/Edward"target="_blank">
-                Edward Sikweya</a>and is on<a href="http://gihub.com/Edward/week7-Weather-API"
-                target="_blank">Github</a>
-                and hosted by
-                <a href="htttp://Edwardweatherapp.netlify.app/"target="_blank">Netlify.</a>
-                <br>
-                The design was done using<a href="http://www.figma.com/" target="_blank">Figma</a>
+        <body>
+        <h1>
+            <input type="Enter"placeholder="Enter city name"class="ener">
+            <button>
+                search
+            </button>
+            <div class="heading-wrapper">
+                <h2 class="heading">Paris</h2>
+                <span class="temperature">🌦12°c</span>
+            </div>
+            <p>
+                Tuesday 07:45,scattered clouds<br>
+                Humidity:<span class="highlight">66</span>,wind speed:4.3
+            </p><br>
+            <table>
+                <tr>
+                    <th><div class="day"></div><span>Mon</span></th>
+                    <th><div class="day"></div><span>Tue</span></th>
+                    <th><div class="day"></div><span>Wed</span></th>
+                    <th><div class="day"></div><span>Thur</span></th>
+                    <th><div class="day"></div><span>Fri</span></th>
+                    <th><div class="day"></div><span>Sat</span></th>
+                    <th><div class="day"></div><span>Sun</span></th>
+                </tr>
+                <tr>
+                    <td>🌦<div class="degrees">
+                        <p>15°</p>
+                        <p classs="fade">19°</p>
+                        </div>
+                    </td>
+                    <td>🌦<div class="degrees">
+                        <p>15°</p>
+                        <p classs="fade">19°</p>
+                        </div>
+                    </td>
+                    <td>🌦<div class="degrees">
+                        <p>15°</p>
+                        <p classs="fade">19°</p>
+                        </div>
+                    </td>
+                    <td>🌦<div class="degrees">
+                        <p>15°</p>
+                        <p classs="fade">19°</p>
+                        </div>
+                    </td>
+                    <td>🌦<div class="degrees">
+                        <p>15°</p>
+                        <p classs="fade">19°</p>
+                        </div>
+                    </td>
+                    <td>🌦<div class="degrees">
+                        <p>15°</p>
+                        <p classs="fade">19°</p>
+                        </div>
+                    </td>
+                    <td>🌦<div class="degrees">
+                        <p>15°</p>
+                        <p classs="fade">19°</p>
+                        </div>
+                    </td>
+                </tr>
+
+            </table>
+           <footer>
+            <p> 
+                coded by <a href="http://github.com/Edward"><span class="links">Edward Sikweya</span></a>
+                and is on<a href="http://github.com/"><span class="links">Github</span></a>
+                and<a href="http://www.netlify.com/"><span class="links">hosted by Netlify.<br></span></a>
+                The design was done uding
+                <a href="Figma.com"><span class="links">Figma</span></a>
             </p>
-  </footer>
-</body>
-</html>
+           </footer>
+        </h1>
+    </body>
+    </head>
+    </html>
